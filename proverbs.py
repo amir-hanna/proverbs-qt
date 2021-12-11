@@ -11,7 +11,7 @@ class Direction(Enum):
     NEXT = 1
     PREVIOUS = 2
 
-class proverbs_main(Ui_MainWindow):
+class Main_Window(Ui_MainWindow):
     def __init__(self, MainWindow):
         self.setupUi(MainWindow)
         self.label.setText(self.get_verse(Direction.RANDOM))
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = proverbs_main(MainWindow)
+    ui = Main_Window(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
 
