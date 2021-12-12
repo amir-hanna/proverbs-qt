@@ -18,6 +18,7 @@ class Main_Window(Ui_MainWindow):
         self.button_prev.clicked.connect(lambda: self.label.setText(self.get_verse(Direction.PREVIOUS)))
         self.button_next.clicked.connect(lambda: self.label.setText(self.get_verse(Direction.NEXT)))
         self.center()
+        MainWindow.show()
 
     def center(self):
         qr = MainWindow.frameGeometry()
@@ -44,9 +45,6 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Main_Window(MainWindow)
-    MainWindow.show()
+    Main_Window(MainWindow)
     sys.exit(app.exec_())
-
-
 
